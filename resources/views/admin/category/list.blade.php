@@ -40,13 +40,24 @@
                             <td class="col-1 text-center"><input type="checkbox" name="" value=""></td>
                             <td>{{ $key + 1 }}</td>
                             <td>{{ $value->name }}</td>
-                            <td>
-                                <img src="" alt="" width="80px">
+                            <td class="text-center">
+                                <img src="{{ Storage::url($value->image) }}" alt="" width="80px">
                             </td>
-                            <td></td>
                             <td>
-                                <button class="btn btn-warning">Sửa</button>
-                                <button class="btn btn-danger">Xóa</button>
+                                @if($value->status == 1)
+                                    Còn nhập hàng
+                                @elseif($value->status == 0)
+                                    Dừng nhập hàng
+                                @endif
+                            </td>
+                            <td>
+                                <a href="{{ route('admin.categories.updateCategory', $value->id) }}"><button class="btn btn-warning">Sửa</button></a>
+                                <form action="{{ route('admin.categories.deleteCategory') }}" method="post">
+                                    @csrf 
+                                    @method('delete')
+                                    <input type="hidden" value="{{ $value->id }}" name="id">
+                                    <button class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button>
+                                </form>
                             </td>
                         </tr>
                         @endforeach
