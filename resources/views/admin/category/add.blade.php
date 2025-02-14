@@ -1,5 +1,12 @@
 @extends('layout.admin.default')
 @section('main')
+
+@push('styles')
+<style>
+
+</style>
+@endpush
+
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Thêm thương hiệu mới</h1>

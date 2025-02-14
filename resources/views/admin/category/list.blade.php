@@ -52,7 +52,9 @@
                             </td>
                             <td>
                                 <a href="{{ route('admin.categories.updateCategory', $value->id) }}"><button class="btn btn-warning">Sửa</button></a>
+
                                 <form action="{{route('admin.categories.deleteCategory') }}" method="post">
+
                                     @csrf 
                                     @method('delete')
                                     <input type="hidden" value="{{ $value->id }}" name="id">
