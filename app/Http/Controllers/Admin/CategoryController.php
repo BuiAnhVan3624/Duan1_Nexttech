@@ -43,7 +43,7 @@ class CategoryController extends Controller
     public function updateCategory($id) {
         $category = Category::findOrFail($id);
         return view('admin.category.update')->with([
-            'category' => $category
+            'category' => $category //123
         ]);
     }
 
