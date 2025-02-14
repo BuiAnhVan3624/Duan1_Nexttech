@@ -24,8 +24,8 @@ class CategoryRequest extends FormRequest
     {
         return [
             'name.required' => 'Không được để trống',
-            'name.alpha_num' => 'Tên phải là chữ cái hoặc chữ số',
-            'name.max' => 'Tên quá dài',
+            'name.alpha.num' => 'Tên phải là chữ cái hoặc chữ số',
+            'name.max' => 'Tên thương hiệu quá dài',
             'name.unique' => 'Thương hiệu này đã tồn tại',
             'image.image' => 'Vui lòng chọn file ảnh'
         ];
