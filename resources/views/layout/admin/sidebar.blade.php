@@ -55,8 +55,8 @@
         </a>
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="">Danh sách danh mục</a>
-                <a class="collapse-item" href="" style="background-color: #000;">
+                <a class="collapse-item" href="{{ route('admin.categories.listCategory') }}">Danh sách danh mục</a>
+                <a class="collapse-item" href="{{ route('admin.categories.addCategory') }}" style="background-color: #000;">
                     <i class="fas fa-fw fa-plus" style="color: #ffffff;"></i>
                     <span style="color: #ffffff;">Thêm mới</span>
                 </a>
@@ -73,8 +73,8 @@
         </a>
         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="">Danh sách sản phẩm</a>
-                <a class="collapse-item" href="" style="background-color: #000;">
+                <a class="collapse-item" href="{{ route('admin.products.listProduct') }}">Danh sách sản phẩm</a>
+                <a class="collapse-item" href="{{ route('admin.products.addProduct') }}" style="background-color: #000;">
                     <i class="fas fa-fw fa-plus" style="color: #ffffff;"></i>
                     <span style="color: #ffffff;">Thêm mới</span>
                 </a>
@@ -93,7 +93,7 @@
         </a>
         <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="">Danh sách biến thể SP</a>
+                <a class="collapse-item" href="{{ route('admin.variants.listVariant') }}">Danh sách biến thể SP</a>
                 <a class="collapse-item" href="" style="background-color: #000;">
                     <i class="fas fa-fw fa-plus" style="color: #ffffff;"></i>
                     <span style="color: #ffffff;">Thêm mới</span>
