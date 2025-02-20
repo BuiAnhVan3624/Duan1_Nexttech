@@ -72,6 +72,12 @@ class CategoryController extends Controller
 
     public function deleteCategory(Request $request) {
         $category = Category::where('id', $request->id)->first();
+        
+        if($category->product()->exists()) {
+            return redirect()->route('admin.categories.listCategory')->with([
+                'messageError' => 'Không được phép xóa vì danh mục đang có sản phẩm'
+            ]);
+        }
 
         if($category->image != null) {
             File::delete(public_path(Storage::url($category->image)));
