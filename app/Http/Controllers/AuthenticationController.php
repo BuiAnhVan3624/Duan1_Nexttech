@@ -47,6 +47,7 @@ class AuthenticationController extends Controller
         Auth::logout();
         return redirect()->route('index');
     }
+   
 
     public function register() {
         return view('account.register');
