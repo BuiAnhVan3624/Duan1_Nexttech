@@ -76,7 +76,7 @@
                                     <a class="lost-password" href="{{ route('register') }}">Đăng ký tài khoản</a>
                                     <a class="lost-password" href="#/">Quên mật khẩu?</a>
                                 </div>
-                            </div>
+                            </div>  
                         </div>
                     </form>
                 </div>
