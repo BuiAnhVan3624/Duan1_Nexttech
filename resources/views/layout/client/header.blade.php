@@ -100,7 +100,7 @@
                                 </div>
                                 <div class="shopping-cart">
                                     <button class="shopping-cart-btn" type="button">
-                                        <a href=""><i class="pe-7s-shopbag icon"></i></a>
+                                        <a href="{{ route('product.viewCart') }}"><i class="pe-7s-shopbag icon"></i></a>
                                         <!-- <sup class="shop-count">03</sup> -->
                                     </button>
                                 </div>
