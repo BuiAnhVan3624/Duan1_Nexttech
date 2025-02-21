@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\VariantController;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\Client\HomeController;
+use App\Http\Controllers\Client\ProductController as ClientProductController;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Variant;
@@ -60,6 +61,25 @@ Route::group([
         Route::put('update-variant/{id}', [VariantController::class, 'updatePutVariant'])->name('updatePutVariant');
     });
 });
+
+
+// Client
+Route::group([
+    'prefix' => 'product',
+    'as' => 'product.'
+], function() {
+    Route::get('detail-product/{id}', [ClientProductController::class, 'detailProduct'])->name('detailProduct');
+    Route::post('detail-product/{id}', [ClientProductController::class, 'detailProduct'])->name('detailProduct');
+    Route::get('view-cart', [ClientProductController::class, 'viewCart'])->name('viewCart');
+    Route::group([
+        'middleware' => 'checkUser'
+    ], function() {
+        Route::post('add-to-cart', [ClientProductController::class, 'addToCart'])->name('addToCart');
+        Route::patch('update-cart', [ClientProductController::class, 'updateCart'])->name('updateCart');
+        Route::delete('delete-cart', [ClientProductController::class, 'deleteCart'])->name('deleteCart');
+    });
+});
+
 
 // Index
 Route::get('/', [HomeController::class, 'index'])->name('index');

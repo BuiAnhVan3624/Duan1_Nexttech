@@ -86,7 +86,7 @@
                 <div class="row">
                     <div class="col mb-3">
                         <label class="form-label">Ảnh sản phẩm</label>
-                        <input class="form-control" type="file" name="image_main" accept="image/*">
+                        <input class="form-control" type="file" name="image" accept="image/*">
                         @error('image_main')
                         <div class="text-danger">{{ $message }}</div>
                         @enderror

@@ -243,7 +243,7 @@
                     <div class="product-item">
                         <div class="inner-content">
                             <div class="product-thumb">
-                                <a href="">
+                                <a href="{{ route('product.detailProduct',$product->id) }}">
                                     <img src="{{ Storage::url($product->variant->first()->image) }}" width="270" height="274" alt="Image-HasTech">
                                 </a>
                                 <div class="product-flag">
@@ -359,7 +359,7 @@
                                     <div class="product-item">
                                         <div class="inner-content">
                                             <div class="product-thumb">
-                                                <a href="">
+                                                <a href="{{ route('product.detailProduct',$product->id) }}">
                                                     <img src="{{ Storage::url($product->variant->first()->image) }}" width="270" height="274" alt="Image-HasTech">
                                                 </a>
                                                 <div class="product-flag">

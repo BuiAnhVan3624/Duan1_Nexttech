@@ -29,8 +29,8 @@ class VariantController extends Controller
     public function addPostVariant(VariantRequest $request) {
         $imagePath = "";
 
-        if($request->hasFile('image_main')) {
-            $image = $request->file('image_main');
+        if($request->hasFile('image')) {
+            $image = $request->file('image');
             $newName = time() . "." . $image->getClientOriginalExtension();
             $imagePath = $image->storeAs('imageProduct', $newName, 'public');
         }
